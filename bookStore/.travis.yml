@@ -1,3 +1,11 @@
 language:java
 jdk:
  -  open jdk17
+ - script:
+     - ./gradlew check
+
+
+   deploy:
+     provider: heroku
+     api_key: $HEROKU_TOKEN
+     app: "books-store-123
